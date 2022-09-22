@@ -58,6 +58,13 @@ small,
 .text_small {
   font-size: 0.8rem;
 }
+header {
+  position: fixed;
+  top: 0;
+  background-color: rgb(182, 4, 4);
+  width: 100%;
+  z-index: 999;
+}
 #navbar {
   display: flex;
   background-color: rgb(182, 4, 4);
@@ -78,8 +85,12 @@ a {
 .section {
   min-height: calc(100vh - 70px);
 }
+#welcome-section {
+  height: 100vh;
+}
 .work {
   background-color: rgb(9, 64, 100);
+  padding-bottom: 4rem;
 }
 
 .section-title {
@@ -90,7 +101,52 @@ a {
 }
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-evenly;
   align-items: center;
+  margin: 2rem;
+}
+@media screen and(min-width:800px) {
+  .card-container {
+    display: flex;
+  }
+}
+.project-tile {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  max-width: 500px;
+  position: relative;
+}
+.image {
+  width: 100%;
+  min-height: 500px;
+}
+.description {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(37, 36, 37, 0.938);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description > p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem auto;
+}
+.btn {
+  margin: 0.5rem auto;
+  font-size: 1rem;
+  background-color: rgb(141, 11, 1);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+.show-container {
+  display: flex;
 }
