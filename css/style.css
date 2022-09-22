@@ -81,15 +81,16 @@ a {
 .work {
   background-color: rgb(9, 64, 100);
 }
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: space-between;
-  align-items: center;
-}
+
 .section-title {
   text-align: center;
   text-decoration: underline;
   color: white;
   padding-top: 1rem;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: space-between;
+  align-items: center;
 }
